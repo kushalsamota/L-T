@@ -1,0 +1,19 @@
+Open two terminals..
+
+first terminal master node
+second terminal worker node
+
+Step2 - On the node where you have install docker earlier.
+
+Uninstall docker
+Command -----    yum remove docker-ce* -y
+Command -----    rm   -rf    /var/lib/docker
+
+Step3 - On both the node master and worker..
+yum install -y yum-utils
+yum-config-manager    --add-repo   https://download.docker.com/linux/centos/docker-ce.repo
+Command -----  yum install docker-ce-18* -y
+Command ----- systemctl start docker
+Command ----- systemctl enable docker
+Command ----- systemctl status docker
+Command ----- docker info --------- see the server version. it must be 18
