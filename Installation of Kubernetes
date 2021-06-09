@@ -100,7 +100,7 @@ exec bash
 hostname
 
 
-Step 11
+Step 11  - on master node
 vi /etc/resolv.conf
 press i
 write ----   nameserver 8.8.8.8
