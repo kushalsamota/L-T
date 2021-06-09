@@ -82,7 +82,7 @@ Step 9
 GO ON MASTER NODE
 COMMAND -- ssh-keygen
 press enter enter enter
-COMMAND -- ssh-copy-id  root@<ip of node> 
+COMMAND -- ssh-copy-id -p 2233 root@<ip of node>     
 press enter and give password of node. 
 
 Step 10 
