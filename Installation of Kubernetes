@@ -99,3 +99,9 @@ hostnamectl set-hostname node1.kube.com
 exec bash
 hostname
 
+Step 11
+Run below command on only on master node
+
+kubeadm init
+wait for 5 min...
+
