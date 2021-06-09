@@ -9,7 +9,7 @@ Uninstall docker
 Command -----    yum remove docker-ce* -y
 Command -----    rm   -rf    /var/lib/docker
 
-Step3 - On both the node master and worker..
+Step2.1 - On both the node master and worker..
 yum install -y yum-utils
 yum-config-manager    --add-repo   https://download.docker.com/linux/centos/docker-ce.repo
 Command -----  yum install docker-ce-18* -y
@@ -42,6 +42,8 @@ change enforcing to disabled
 save and close the file
 setenforce permissive
 getenforce
+systemctl stop firewalld
+systemctl disable firewalld
 
 Step 6 
 
@@ -100,7 +102,7 @@ exec bash
 hostname
 
 
-Step 11  - on master node
+Step 11  - on master node and worker node.
 vi /etc/resolv.conf
 press i
 write ----   nameserver 8.8.8.8
