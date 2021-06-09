@@ -60,3 +60,28 @@ EOF
 
 on both nodes -- command ---- ls /etc/yum.repos.d/kubernetes.repo   -- make sure it is present on both the nodes.
 on both nodes --- command ---- yum install kubelet-1.18* kubectl-1.18* kubeadm-1.18* -y
+
+Step 7 
+on both the nodes -- command ---   systemctl start kubelet
+on both the nodes -- command ---   systemctl enable kubelet
+
+Step 8 
+COPY THE COMMAND from cat to EOF on both the nodes
+
+cat <<EOF > /etc/sysctl.d/k8s.conf
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+EOF
+
+press enter.
+
+command on both the nodes ---- command ------   sysctl --system
+
+Step 9 
+
+GO ON MASTER NODE
+COMMAND -- ssh-keygen
+press enter enter enter
+COMMAND -- ssh-copy-id  root@<ip of node> 
+press enter and give password of node. 
+
