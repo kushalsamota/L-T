@@ -99,7 +99,18 @@ hostnamectl set-hostname node1.kube.com
 exec bash
 hostname
 
+
 Step 11
+vi /etc/resolv.conf
+press i
+write ----   nameserver 8.8.8.8
+press escc
+type :wq!
+press enter.
+
+cat /etc/resolv.conf
+
+Step 12
 Run below command on only on master node
 
 kubeadm init
