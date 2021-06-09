@@ -42,3 +42,21 @@ change enforcing to disabled
 save and close the file
 setenforce permissive
 getenforce
+
+Step 6 
+
+On both the nodes
+copy comple command from cat to EOF and paster it to both the nodes and enter
+
+cat <<EOF > /etc/yum.repos.d/kubernetes.repo
+[kubernetes]
+name=Kubernetes
+baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
+enabled=1
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+EOF
+
+on both nodes -- command ---- ls /etc/yum.repos.d/kubernetes.repo   -- make sure it is present on both the nodes.
+on both nodes --- command ---- yum install kubelet-1.18* kubectl-1.18* kubeadm-1.18* -y
