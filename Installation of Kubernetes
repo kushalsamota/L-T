@@ -116,3 +116,23 @@ Run below command on only on master node
 kubeadm init
 wait for 5 min...
 
+Step 13
+Go on master node
+mkdir -p $HOME/.kube
+cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+chown $(id -u):$(id -g) $HOME/.kube/config
+
+Step 14
+Go on master node
+kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+
+Wait for few seconds.
+
+Step 15
+Copy the command of kubeadm join on master screen. it will be present in the output of kubeadm init commands.
+copy that command
+go on worker node
+and run that command on worker nodes.
+
+come to master node
+run -- kubectl get nodes  every 10 sec.
