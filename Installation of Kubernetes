@@ -17,3 +17,28 @@ Command ----- systemctl start docker
 Command ----- systemctl enable docker
 Command ----- systemctl status docker
 Command ----- docker info --------- see the server version. it must be 18
+
+Step 3 - 
+
+Master node ---   vi   /etc/hosts
+ip of master    master.kube.com   master
+ip of node        node.kube.com      node
+
+
+Node -------------  vi /etc/hosts
+ip of master    master.kube.com   master
+ip of node        node.kube.com      node
+
+Step 4 - 
+Master node ---   cat /etc/hosts   --- and confirm whether both the ip address are listed or not
+Node -------------   cat /etc/hosts ---- and confirm whether both  the ip address are listed or not
+
+Step 5 - 
+On both the nodes - master and worker
+swapoff -a
+free -h ----- to verify
+vi /etc/selinux/config
+change enforcing to disabled
+save and close the file
+setenforce permissive
+getenforce
