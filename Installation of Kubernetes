@@ -95,7 +95,7 @@ exec bash
 hostname
 
 Worker ----
-hostnamectl set-hostname node1.kube.com
+hostnamectl set-hostname node.kube.com
 exec bash
 hostname
 
