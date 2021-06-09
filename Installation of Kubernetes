@@ -85,3 +85,17 @@ press enter enter enter
 COMMAND -- ssh-copy-id  root@<ip of node> 
 press enter and give password of node. 
 
+Step 10 
+
+Run below command on both the nodes.
+master ---
+
+hostnamectl set-hostname master.kube.com
+exec bash
+hostname
+
+Worker ----
+hostnamectl set-hostname node1.kube.com
+exec bash
+hostname
+
