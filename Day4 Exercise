@@ -41,4 +41,11 @@ kubectl get ns --show-labels
 kubectl label ns kube-system ns-
 kubectl get ns --show-labels
 
+cat $HOME/.kube/config
+(Read the file-- with this file kubectl knows where api server is running on which port number and all the certifications)
+
+kubectl --help
+kubectl get --help
+kubectl get nodes --help
+kubectl get pods --help
 
