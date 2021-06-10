@@ -25,4 +25,15 @@ kubectl label node node.kube.com disk-
 kubectl label node master.kube.com disk-
 kubectl get nodes -L disk
 
+kubectl describe ns kube-system
+kubectl create ns kushal
+kubectl get ns
+kubectl get all -n kushal
+kubectl get pods -n kushal
+kubectl get pods,secret -n kushal
+kubectl get all -n kushal
+kubectl delete ns kushal
+kubectl get ns
+
+
 
