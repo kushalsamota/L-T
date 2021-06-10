@@ -36,4 +36,9 @@ kubectl delete ns kushal
 kubectl get ns
 
 
+kubectl label ns kube-system ns=prod
+kubectl get ns --show-labels
+kubectl label ns kube-system ns-
+kubectl get ns --show-labels
+
 
