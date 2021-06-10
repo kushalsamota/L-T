@@ -1,0 +1,28 @@
+kubectl get nodes
+kubectl get nodes -o wide
+kubectl get nodes --show-labels
+kubectl get nodes -o wide --show-labels
+kubectl describe node node.kube.com
+kubectl describe node master.kube.com
+kubectl get ns
+kubectl get all -n kube-system
+kubectl get all -n kube-system -o wide
+kubectl get all -n kube-system -o wide --show-labels
+kubectl get node node.kube.com -o yaml > /node.yaml
+vi /node.yaml
+press esc
+type :wq!
+press enter
+
+
+
+kubectl api-resources
+kubectl label node node.kube.com disk=sata
+kubectl label node master.kube.com disk=ssd
+kubectl get nodes -L disk
+kubectl get nodes -l disk=sata
+kubectl label node node.kube.com disk-
+kubectl label node master.kube.com disk-
+kubectl get nodes -L disk
+
+
